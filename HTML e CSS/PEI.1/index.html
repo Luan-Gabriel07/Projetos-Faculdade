@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaceRun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PaceRun</h1>
+    <form> <!-- "form" é uma caixa que agrupa todos os campos de um formulario-->
+        <label for = "nome"> <!-- "label" é o texto que explica o que cada input é-->
+            Nome: <input type="text" id="nome">
+        </label>
+        <!-- "for" é uma ponte, que diz esse elemento pertence a esse elemento especifico-->
+        <!-- "id" serve para dar um nome para aquele elemento, como se fosse o nome de uma variavel-->
+        <label for = "data">
+            Data: <input type="date" id="data">
+        </label>
+        
+        <label for = "km">
+            KM: <input type="number" id="km">
+        </label>
+        
+        <label for = "pace">
+            Pace: <input type="text" id="pace">
+        </label>
+
+        <button> Confirmar as informações </button>
+    </form>
+    <ol>
+        <li>Luan - 18/09/2026 - 5km - pace 5:30</li>
+        <li>João - 15/09/2026 - 10km - pace 4:20</li>
+        <li>Daniel - 10/09/2026 - 3 km - pace 2:10</li>
+    </ol>
+</body>
+</html>

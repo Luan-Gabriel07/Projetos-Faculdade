@@ -1,0 +1,39 @@
+/* "background-color" serve para colocar a cor do fundo*/
+/* "color" serve para colocar a cor do texto*/ 
+body{
+    background-color: #020225;
+    color: white;
+}
+
+button{
+    background-color: blue;
+    color: white;
+}
+
+button:hover {
+/* ":houver" serve caso queira ao passar o mouse ou clicar no botão, o botão mude de cor*/
+    background-color: yellow;
+    color: white;
+}
+
+form {
+/* "display: flex" organizar elementos lado a lado ou em coluna de forma alinhada */ 
+/* "flex-direction: colum" organiza em coluna*/   
+/* esse display é colocado na caixa que contem os elementos */   
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    /* "margin" = margem */ 
+    /*espaço na parte inferior do elemento*/
+    margin-bottom: 15px;
+}
+
+input {
+    background-color: #05057c;
+    color: white;
+    border: 1px solid yellow; /*editar as bordas*/
+    border-radius: 10px; /*arredondar os cantos*/
+    padding: 8px; /* uma margem para escrever o conteudo, ou seja para o texto não ficar grudado na margem da caixa*/
+}
