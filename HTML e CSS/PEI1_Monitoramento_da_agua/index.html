@@ -1,0 +1,108 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoramento da Água</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Monitoramento da Água</h1>
+        <p>Sistema de monitoramento de pH e energia</p>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h2>pH da Água</h2>
+
+                <div class="valor" id="valorPh">
+                    7.0
+                </div>
+
+                <p id="statusPh">
+                    pH dentro da faixa aceitável
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h2>Energia</h2>
+
+                <div class="valor" id="statusEnergia">
+                    OK
+                </div>
+
+                <p id="energiaMensagem">
+                    Energia elétrica disponível
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h2>Oxigenação</h2>
+
+                <div class="valor" id="statusOxigenacao">
+                    DESLIGADA
+                </div>
+
+                <p id="oxigenacaoMensagem">
+                    Sistema funcionando normalmente
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="alerta" id="alerta">
+
+            <h2>⚠️ Alerta</h2>
+
+            <p id="mensagemAlerta">
+                Nenhum problema detectado.
+            </p>
+
+        </section>
+
+
+        <section class="controle">
+
+            <h2>Simulação do sistema</h2>
+
+            <button onclick="simularPhBaixo()">
+                Simular pH baixo
+            </button>
+
+            <button onclick="simularPhNormal()">
+                Simular pH normal
+            </button>
+
+            <button onclick="simularFaltaEnergia()">
+                Simular falta de energia
+            </button>
+
+            <button onclick="simularEnergiaNormal()">
+                Restaurar energia
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Sistema de Monitoramento da Água</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
