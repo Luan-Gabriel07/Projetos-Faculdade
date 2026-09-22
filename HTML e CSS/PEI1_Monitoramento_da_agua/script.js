@@ -39,6 +39,16 @@ onValue(monitoramentoRef, (snapshot) => {
     //Mostra os dados no console
     console.log("Dados recebidos:", dados);
 
+     if (dados) {
+        ph = Number(dados.ph);
+        energia = Boolean(dados.energia);
+
+        console.log("pH atual:", ph);
+        console.log("Energia atual:", energia);
+
+        atualizarSistema();
+    }
+
 });
 
 //Constantes para o phmaximo e phminimo se estiver entre o valor tem ph aceitavel, agora se estiver fora pode está abaixo ou acima
