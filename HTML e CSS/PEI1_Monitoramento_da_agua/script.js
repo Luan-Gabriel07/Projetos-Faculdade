@@ -1,6 +1,45 @@
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+  
+  import{
+    getDatabase,
+    ref,
+    onValue
+  } from
+        "https://www.gstatic.com/firebasejs/12.19.0/firebase-database.js";
+  
+    const firebaseConfig = {
+        apiKey: "AIzaSyDj_jqctc70yQZ57uc-XatbPvw_tWRK3CI",
+        authDomain: "monitoramento-ph.firebaseapp.com",
+        databaseURL: "https://monitoramento-ph-default-rtdb.firebaseio.com",
+        projectId: "monitoramento-ph",
+        storageBucket: "monitoramento-ph.firebasestorage.app",
+        messagingSenderId: "712911339308",
+        appId: "1:712911339308:web:d5b6648a8afa5c36fe3689"
+    };
+
+// Inicializa Firebase
+const app = initializeApp(firebaseConfig);
+
+  //Conecta ao Realtime Database
+const database = getDatabase(app);
+
 //variáveis
 let ph = 7.0;
 let energia = true;
+
+// acesse o caminho "monitoramento" do meu banco 
+const monitoramentoRef = ref(database, "monitoramento");
+
+//quando os dados desse caminho forem carregados ou modificados, execute essa função.
+onValue(monitoramentoRef, (snapshot) => {
+
+    //Pega os dados
+    const dados = snapshot.val();
+
+    //Mostra os dados no console
+    console.log("Dados recebidos:", dados);
+
+});
 
 //Constantes para o phmaximo e phminimo se estiver entre o valor tem ph aceitavel, agora se estiver fora pode está abaixo ou acima
 const phMinimo = 6.5;

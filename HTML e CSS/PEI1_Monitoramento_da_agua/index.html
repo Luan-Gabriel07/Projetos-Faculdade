@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,9 +20,11 @@
     <main>
         <!--criamos o dashboard -> paienel de controle-->
         <section class="dashboard">
+            <!--"section" serve para agrupar um conjunto de contúdos que fazem parte de uma mesma área-->
 
             <!--card do pH-->
             <div class="card">
+                <!--"div" é basicamente para agrupar elementos-->
                 <h2>pH da Água</h2>
 
                 <div class="valor" id="valorPh">
@@ -67,7 +68,7 @@
         </section>
 
 
-        
+        <!-- Essa parte é para mostrar as mensagens de alerta-->
         <section class="alerta" id="alerta">
 
             <h2>⚠️ Alerta</h2>
@@ -83,6 +84,7 @@
 
             <h2>Simulação do sistema</h2>
 
+            <!--Esses botões são apenas para simular o pH-->
             <button onclick="simularPhBaixo()">
                 Simular pH baixo
             </button>
@@ -103,12 +105,12 @@
 
     </main>
 
+    <!--Rodapé da página-->
     <footer>
         <p>Sistema de Monitoramento da Água</p>
     </footer>
 
-    <script src="script.js"></script>
-
+    <!--ligação com o Java Script-->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
-```
